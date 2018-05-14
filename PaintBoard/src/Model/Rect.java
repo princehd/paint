@@ -1,6 +1,7 @@
 package Model;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Rect extends Figure{
 	private int x,y,width,height;
@@ -15,24 +16,11 @@ public class Rect extends Figure{
 		this.color = color;
 	}
 
-	public int getX() {
-		return x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
-	}
-
-	public Color getColor() {
-		return color;
+	@Override
+	public void draw(Graphics g) {
+		// TODO Auto-generated method stub
+		g.setColor(color);
+		g.drawRect(x, y, width, height);
 	}
 	
 	

@@ -1,6 +1,7 @@
 package Model;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 public class Line extends Figure{
 	private int x1,y1,x2,y2;
@@ -15,24 +16,10 @@ public class Line extends Figure{
 		this.color = color;
 	}
 
-	public int getX1() {
-		return x1;
-	}
-
-	public int getY1() {
-		return y1;
-	}
-
-	public int getX2() {
-		return x2;
-	}
-
-	public int getY2() {
-		return y2;
-	}
-
-	public Color getColor() {
-		return color;
+	@Override
+	public void draw(Graphics g) {
+		g.setColor(color);
+		g.drawLine(x1, y1, x2, y2);
 	}
 	
 	

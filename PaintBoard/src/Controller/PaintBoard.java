@@ -18,15 +18,7 @@ public class PaintBoard extends Canvas{
 	public void paint(Graphics g) {
 		// TODO Auto-generated method stub
 		for (Figure figure : list) {
-			if(figure instanceof Line){
-				Line line = (Line)figure;
-				g.setColor(line.getColor());
-				g.drawLine(line.getX1(), line.getY1(), line.getX2(), line.getY2());
-			}
-			else if(figure instanceof Rect){
-				Rect rect = (Rect)figure;
-				g.setColor(rect.getColor());
-			}
+			figure.draw(g);
 		}
 	}
 

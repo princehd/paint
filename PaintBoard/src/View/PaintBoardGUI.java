@@ -135,6 +135,11 @@ public class PaintBoardGUI {
 		panel_1.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("New button");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				choice = "rect";
+			}
+		});
 		panel_1.add(btnNewButton_5);
 	}
 }
